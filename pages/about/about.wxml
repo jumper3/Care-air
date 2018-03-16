@@ -1,0 +1,24 @@
+<!--pages/about/about.wxml-->
+<view class='container'>
+  <view class='about' wx:if='{{label === "about"}}'>
+    <view class='title'>为什么要写这个小程序❓</view>
+    <view class='content'>只是想让身边的人在雾霾的侵袭中知道自己可以做些什么，不至于傻傻地等待雾霾的侵袭</view>
+    <view class='title'>如果你有疑问或建议🤔️</view>
+    <view class='content'>可以直接加好友发微信：sunlingshan</view>
+    <view class='title'>之后版本的计划📄</view>
+    <view class='content'>支持城市选择、雾霾提醒</view>
+    <text class='ver'>Care空气 V0.1.0\n☘️</text>
+  </view>
+  <view class='thank' wx:if='{{label === "thank"}}'>
+    <view class='title'>我们不生产数据，只作数据的搬运工</view>
+    <text class='content'>
+    该小程序数据由和风天气提供
+    https://free-api.heweather.com
+    感谢和风天气对开发者们的支持与信任
+    
+    同时也感谢腾讯位置服务
+    https://apis.map.qq.com
+    提供的逆地址解析服务
+    </text>
+  </view>
+</view>

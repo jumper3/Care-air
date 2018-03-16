@@ -1,0 +1,43 @@
+/* pages/about/about.wxss */
+.container {
+  padding: 0;
+}
+
+.about,.thank,.reward {
+  margin: 1rem auto;
+  width: 80%;
+  color: #555;
+}
+
+.ver {
+  display: inline-block;
+  text-align: center;
+  margin: 12rem auto 0 auto;
+  font-size: 28rpx;
+  color: #888;
+  width: 100%
+}
+
+.title {
+  font-weight: 600;
+  line-height: 2.5rem;
+  font-size: 1rem;
+}
+
+.content {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto 1rem auto;
+  font-size: 28rpx;
+  line-height: 1.5rem;
+  width: 100%
+}
+
+.reward-img {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto 0 auto;
+  width: 18rem;
+  height: 18rem;
+  text-align: center;
+}

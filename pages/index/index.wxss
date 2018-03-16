@@ -1,0 +1,132 @@
+.air-card {
+  height: 12rem;
+  width: 8rem;
+  border-radius: 1rem;
+  box-shadow: 4rpx 4rpx 4rpx 4rpx rgba(150,150,150,0.3);
+  padding: 3rem 2rem;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: 400;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: air-card;
+  animation-name: air-card;
+}
+
+@-webkit-keyframes air-card {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes air-card {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.loading {
+  margin-top: 20vh;
+  color: #888;
+  font-weight: 300;
+}
+
+.condition-green {
+  background-color: rgba(52,205,125,0.8);
+}
+
+.condition-yellow {
+  background-color: rgba(255,220,0,0.85);
+}
+
+.condition-orange {
+  background-color: rgba(255,160,50,0.8);
+}
+
+.condition-red {
+  background-color: rgba(255,50,50,0.6);
+}
+
+.condition-purple {
+  background-color: rgba(140,45,210,0.6);
+}
+
+.condition-black {
+  background-color: #555;
+}
+
+.quality {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: location;
+  animation-name: location;
+}
+
+@-webkit-keyframes location {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0.8;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes location {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0.8;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo{
+  width: 50rpx;
+  height: 50rpx;
+}

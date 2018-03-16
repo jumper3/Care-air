@@ -1,0 +1,63 @@
+<view class='container'>
+  <view class='color-card condition-{{condition}}'>
+    <view class='aqi'>{{raw_data.air_now_city.aqi}}</view>
+    <view class='discription'>{{raw_data.air_now_city.qlty}}</view>
+    <view class='time'>{{pub_time}} 发布</view>
+  </view>
+  <view class='notice-card'>
+    <view class='notice leaf' wx:if='{{aqi >= 0 && aqi <= 50}}'><image class='logo' src='../../img/leaf.png'></image>空气不错，可以尽情呼吸</view>
+    <view class='notice baby' wx:if='{{aqi >= 50}}'><image class='logo' src='../../img/baby.png'></image>老人孩子等敏感人群应注意防护</view>
+    <view class='notice bike' wx:if='{{aqi >= 150}}'><image class='logo' src='../../img/bike.png'></image>适当减少户外活动</view>
+    <view class='notice wind' wx:if='{{aqi >= 200}}'><image class='logo' src='../../img/wind.png'></image>关闭门窗以防脏空气流入</view>
+    <view class='notice cleaner' wx:if='{{aqi >= 150}}'><image class='logo' src='../../img/cleaner.png'></image>建议开启空气净化器</view>
+    <view class='notice mask' wx:if='{{aqi >= 150}}'><image class='logo' src='../../img/mask.png'></image>戴上口罩吧</view>
+    <view class='notice home' wx:if='{{aqi >= 300}}'><image class='logo' src='../../img/home.png'></image>外面空气很脏，尽量留在室内</view>
+  </view>
+  <view class='detail-card'>
+    <view class='detail-left'>
+      <view class='detail'>
+        <view class="item">PM2.5</view>
+        <view class="num">{{raw_data.air_now_city.pm25}}</view>
+      </view>
+      <view class='detail'>
+        <view class="item">SO2</view>
+        <view class="num">{{raw_data.air_now_city.so2}}</view>
+      </view>
+      <view class='detail'>
+        <view class="item">CO</view>
+        <view class="num">{{raw_data.air_now_city.co}}</view>
+      </view>
+    </view>
+    <view class='detail-right'>
+      <view class='detail'>
+        <view class="item">PM10</view>
+        <view class="num">{{raw_data.air_now_city.pm10}}</view>
+      </view>
+      <view class='detail'>
+        <view class="item">O3</view>
+        <view class="num">{{raw_data.air_now_city.o3}}</view>
+      </view>
+      <view class='detail'>
+        <view class="item">NO2</view>
+        <view class="num">{{raw_data.air_now_city.no2}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='station-card'>
+    <view class='station-head'>
+      <view>监测站</view>
+      <view class='sta-aqi'>AQI</view>
+      <view class='sta-qlty'>等级</view>
+    </view>
+    <view class='station-body' wx:for-items='{{raw_data.air_now_station}}' wx:for-item='data' wx:key='{{data.air_sta}}'>
+      <view>{{data.air_sta}}</view>
+      <view class='sta-aqi'>{{data.aqi}}</view>
+      <view class='sta-qlty'>{{data.qlty}}</view>
+    </view>
+  </view>
+  <view class='link-area'>
+    <view class='link' data-label='about' bindtap='toAbout'>关于</view>
+    <view class='link'bindtap='toReward'>赞赏</view>
+    <view class='link' data-label='thank' bindtap='toAbout'>致谢</view>
+  </view>
+</view>

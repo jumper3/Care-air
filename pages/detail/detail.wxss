@@ -1,0 +1,157 @@
+/* pages/detail/detail.wxss */
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: rgb(250,250,250);
+}
+
+.container {
+  padding: 0;
+}
+.color-card {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.aqi {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.discription {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: .5rem;
+}
+.time {
+  font-size: .8rem;
+  font-weight: 400;
+  margin-top: .3rem;
+}
+
+.notice-card{
+  width: 100%;
+  background-color: #fff;
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+  box-shadow: 0 2rpx 2rpx 2rpx rgba(150,150,150,0.2);
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.notice {
+  margin: 0 1.5rem;
+  font-size: 28rpx;
+  line-height: 3rem;
+}
+
+.logo {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.detail-card{
+  width: 100%;
+  background-color: #fff;
+  padding: 1.5rem 0;
+  box-shadow: 0 2rpx 2rpx 2rpx rgba(150,150,150,0.2);
+  color: #555;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.detail {
+  margin: 0 1.5rem;
+  font-size: 28rpx;
+  line-height: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.detail-left, .detail-right {
+  width: 50%;
+}
+
+.station-card {
+  width: 100%;
+  background-color: #fff;
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+  box-shadow: 0 2rpx 2rpx 2rpx rgba(150,150,150,0.2);
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-size: 28rpx;
+}
+
+.station-head {
+  margin: 1rem 1.5rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.station-body {
+  margin: 1rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.station-head view,.station-body view {
+  width: 33%;
+}
+
+.sta-aqi {
+  text-align: center;
+}
+
+.sta-qlty {
+  text-align: right;
+}
+
+.link-area {
+  margin: 0 auto 1rem auto;
+  color: #888;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.link {
+  padding: .5rem 2rem;
+}
+
+.condition-green {
+  background-color: #00e19b;
+}
+
+.condition-yellow {
+  background-color: #f2d112;
+}
+
+.condition-orange {
+  background-color: #ffb14f;
+}
+
+.condition-red {
+  background-color: #ff737c;
+}
+
+.condition-purple {
+  background-color: #c86be7;
+}
+
+.condition-black {
+  background-color: #555;
+}
