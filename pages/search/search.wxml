@@ -1,2 +1,8 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="container">
+  <view class='search'>
+     <input type="search" confirm-type='search' placeholder="请输入城市名" auto-focus bindconfirm='searchBook' bindblur='searchBook' />
+     <view class='cancel'>取消</view>
+  </view>
+
+</view>

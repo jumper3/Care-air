@@ -15,10 +15,5 @@ Page({
     wx.setNavigationBarTitle({
       title: title
     })
-  },
-  preview() {
-    wx.previewImage({
-      urls: ['http://www.m555.com/mb_pic/2007/09/20070917093919_6a0709.jpg']
-    })
   }
 })

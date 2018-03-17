@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='air-card condition-{{condition}}' wx:if='{{city}}' bindtap='toDetail'>
+  <view class='air-card condition-{{condition}}' wx:if='{{city}}' data-elem='card' bindtap='toDetail'>
     <view class='discription'>{{raw_data.air_now_city.qlty}}</view>
     <view class='quality'>{{raw_data.air_now_city.aqi}}</view>
     <view class='location'>
-    <image src='../../img/location.png' class='logo'></image>
+    <image src='../../img/location.png' class='logo' data-elem='location'></image>
     {{city}} {{district}}</view>
   </view>
   <view wx:else class='loading'>加载中……</view>

@@ -39,10 +39,16 @@ Page({
       }
     })
   },
-  toDetail () {
-    wx.navigateTo({
-      url: '../detail/detail'
-    })
+  toDetail (e) {
+    if (e.target.dataset.elem === 'card') {
+      wx.navigateTo({
+        url: '../detail/detail'
+      })
+    } else {
+      wx.navigateTo({
+        url:'../search/search'
+      })
+    }
   },
   onShareAppMessage (res) {
     return {
