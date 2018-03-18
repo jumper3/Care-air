@@ -32,15 +32,15 @@ const judgeColor = num => {
 
 const colorCode = color => {
   if (color === 'green') {
-    return '#00e19b'
+    return '#5dd797'
   } else if (color === 'yellow') {
-    return '#f2d112'
+    return '#ffdf19'
   } else if (color === 'orange') {
-    return '#ffb14f'
+    return '#ffb35b'
   } else if (color === 'red') {
-    return '#ff737c'
+    return '#ff8484'
   } else if (color === 'purple') {
-    return '#c86be7'
+    return '#ae6cdf'
   } else if (color === 'black') {
     return '#555'
   } else {

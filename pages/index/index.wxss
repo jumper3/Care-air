@@ -50,7 +50,7 @@
 }
 
 .condition-yellow {
-  background-color: rgba(255,220,0,0.85);
+  background-color: rgba(255,220,0,0.9);
 }
 
 .condition-orange {
@@ -62,7 +62,7 @@
 }
 
 .condition-purple {
-  background-color: rgba(140,45,210,0.6);
+  background-color: rgba(140,45,210,0.7);
 }
 
 .condition-black {

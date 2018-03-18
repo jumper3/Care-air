@@ -133,23 +133,23 @@ page {
 }
 
 .condition-green {
-  background-color: #00e19b;
+  background-color: #5dd797;
 }
 
 .condition-yellow {
-  background-color: #f2d112;
+  background-color: #ffdf19;
 }
 
 .condition-orange {
-  background-color: #ffb14f;
+  background-color: #ffb35b;
 }
 
 .condition-red {
-  background-color: #ff737c;
+  background-color: #ff8484;
 }
 
 .condition-purple {
-  background-color: #c86be7;
+  background-color: #ae6cdf;
 }
 
 .condition-black {
