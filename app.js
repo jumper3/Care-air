@@ -46,7 +46,8 @@ App({
           success: res => {
             if (res.data.status === 0) {
               this.globalData.city = res.data.result.address_component.city,
-              this.globalData.district = res.data.result.address_component.district
+              this.globalData.district = res.data.result.address_component.district,
+              this.globalData.localCity = res.data.result.address_component.city
             } else {
               alert ("定位失败")
             }
@@ -56,11 +57,14 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
-    latitude: null,
-    longitude: null,
-    localAir: null,
-    city: null,
-    district: null
+    userInfo: null,       //用户信息
+    latitude: null,       //初次定位纬度
+    longitude: null,      //初次定位经度
+    localAir: null,       //本地天气数据
+    otherAir: null,       //其他城市天气数据
+    city: null,           //所选城市
+    localCity: null,      //定位城市
+    district: null,       //城市下辖地区（只在本地模式出现）
+    mode: 'local'         //模式 local:本地 other:其他地区
   }
 })

@@ -1,8 +1,40 @@
 <!--pages/search/search.wxml-->
 <view class="container">
   <view class='search'>
-     <input type="search" confirm-type='search' placeholder="请输入城市名" auto-focus bindconfirm='searchBook' bindblur='searchBook' />
-     <view class='cancel'>取消</view>
+     <input type="search" confirm-type='search' placeholder="请输入城市名" bindconfirm='searchCity'/>
+     <view class='cancel' bindtap="cancel">取消</view>
+  </view>
+
+  <view class='list'></view>
+
+  <view class='cities'>
+    <view class='title'>
+      当前位置
+    </view>
+    <view class='city-wrapper'>
+      <view class='city-block' data-name='当前城市' bindtap='selectCity'>
+        {{presentCity}}
+      </view>
+    </view>
+  </view>
+  <view class='cities'>
+    <view class='title'>
+      热门城市
+    </view>
+    <view class='city-wrapper'>
+      <view class='city-block' data-name='北京' bindtap='selectCity'>北京</view>
+      <view class='city-block' data-name='上海' bindtap='selectCity'>上海</view>
+      <view class='city-block' data-name='广州' bindtap='selectCity'>广州</view>
+      <view class='city-block' data-name='深圳' bindtap='selectCity'>深圳</view>
+      <view class='city-block' data-name='南京' bindtap='selectCity'>南京</view>
+      <view class='city-block' data-name='杭州' bindtap='selectCity'>杭州</view>
+      <view class='city-block' data-name='天津' bindtap='selectCity'>天津</view>
+      <view class='city-block' data-name='沈阳' bindtap='selectCity'>沈阳</view>
+      <view class='city-block' data-name='西安' bindtap='selectCity'>西安</view>
+      <view class='city-block' data-name='武汉' bindtap='selectCity'>武汉</view>
+      <view class='city-block' data-name='重庆' bindtap='selectCity'>重庆</view>
+      <view class='city-block' data-name='成都' bindtap='selectCity'>成都</view>
+    </view>
   </view>
 
 </view>
