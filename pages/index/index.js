@@ -12,16 +12,13 @@ Page({
     city: null,
     district: null
   },
-  onLoad: function() {
+  onLoad () {
     
     wx.request({
       url,
       data: {
         location: 'auto_ip',
         key
-      },
-      header: {
-        'content-type': 'application/json'
       },
       success: res => {
         let raw_data = res.data.HeWeather6[0],
@@ -40,7 +37,7 @@ Page({
     })
   },
   toDetail (e) {
-    if (e.target.dataset.elem === 'card') {
+    if (e.target.dataset.elem !== 'location') {
       wx.navigateTo({
         url: '../detail/detail'
       })

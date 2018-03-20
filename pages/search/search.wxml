@@ -17,23 +17,26 @@
       </view>
     </view>
   </view>
+
+  <view class='cities' wx:if='{{historyCities.length > 0}}'>
+    <view class='title'>
+      历史记录
+      <image src="../../img/delete.png" class='delete' bindtap='deleteHistory'/>
+    </view>
+    <view class='city-wrapper'>
+      <view class='city-block' wx:for-items='{{historyCities}}' wx:for-item='city' wx:key='city' data-name='{{city}}' bindtap='selectCity'>
+        {{city}}
+      </view>
+    </view>
+  </view>
+
   <view class='cities'>
     <view class='title'>
       热门城市
     </view>
     <view class='city-wrapper'>
-      <view class='city-block' data-name='北京' bindtap='selectCity'>北京</view>
-      <view class='city-block' data-name='上海' bindtap='selectCity'>上海</view>
-      <view class='city-block' data-name='广州' bindtap='selectCity'>广州</view>
-      <view class='city-block' data-name='深圳' bindtap='selectCity'>深圳</view>
-      <view class='city-block' data-name='南京' bindtap='selectCity'>南京</view>
-      <view class='city-block' data-name='杭州' bindtap='selectCity'>杭州</view>
-      <view class='city-block' data-name='天津' bindtap='selectCity'>天津</view>
-      <view class='city-block' data-name='沈阳' bindtap='selectCity'>沈阳</view>
-      <view class='city-block' data-name='西安' bindtap='selectCity'>西安</view>
-      <view class='city-block' data-name='武汉' bindtap='selectCity'>武汉</view>
-      <view class='city-block' data-name='重庆' bindtap='selectCity'>重庆</view>
-      <view class='city-block' data-name='成都' bindtap='selectCity'>成都</view>
+      <view class='city-block' wx:for-items='{{hotCities}}' wx:for-item='city' wx:key='city' 
+      data-name='{{city}}' bindtap='selectCity'>{{city}}</view>
     </view>
   </view>
 

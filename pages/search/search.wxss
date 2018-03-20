@@ -50,6 +50,15 @@ page {
   margin-left: .3rem;
 }
 
+.delete {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+  vertical-align:middle;
+}
+
 .city-wrapper {
   display: flex;
   flex-direction: row;
