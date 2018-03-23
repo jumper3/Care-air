@@ -137,7 +137,7 @@ page {
 }
 
 .condition-yellow {
-  background-color: #ffdf19;
+  background-color: #fddb39;
 }
 
 .condition-orange {

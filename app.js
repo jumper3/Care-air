@@ -33,7 +33,7 @@ App({
     longitude: null,      //初次定位经度
     localAir: null,       //本地天气数据
     otherAir: null,       //其他城市天气数据
-    city: null,           //所选城市
+    city: null,           //当前所选城市
     localCity: null,      //定位城市
     district: null,       //城市下辖地区（只在本地模式出现）
     mode: 'local'         //模式 local:本地 other:其他地区

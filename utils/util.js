@@ -34,7 +34,7 @@ const colorCode = color => {
   if (color === 'green') {
     return '#5dd797'
   } else if (color === 'yellow') {
-    return '#ffdf19'
+    return '#fddb39'
   } else if (color === 'orange') {
     return '#ffb35b'
   } else if (color === 'red') {

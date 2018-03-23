@@ -4,7 +4,7 @@
     <view class='discription'>{{raw_data.air_now_city.qlty}}</view>
     <view class='quality'>{{raw_data.air_now_city.aqi}}</view>
     <view class='location' data-elem='location'>
-      <image src='../../img/location.png' class='logo' data-elem='location'></image>
+      <image src='../../img/location.png' class='logo' data-elem='location' wx:if='{{mode === "local"}}'></image>
       {{city}} {{district}}
     </view>
   </view>

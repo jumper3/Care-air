@@ -49,7 +49,7 @@
       <view class='sta-aqi'>AQI</view>
       <view class='sta-qlty'>等级</view>
     </view>
-    <view class='station-body' wx:for-items='{{raw_data.air_now_station}}' wx:for-item='data' wx:key='{{data.air_sta}}'>
+    <view class='station-body' wx:for-items='{{raw_data.air_now_station}}' wx:for-item='data' wx:key='{{data.air_sta}}' wx:if='{{data.aqi != 0}}'>
       <view>{{data.air_sta}}</view>
       <view class='sta-aqi'>{{data.aqi}}</view>
       <view class='sta-qlty'>{{data.qlty}}</view>

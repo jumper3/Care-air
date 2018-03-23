@@ -82,6 +82,7 @@
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
+  min-width: 4rem;
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
   -webkit-animation-fill-mode: both;

@@ -7,24 +7,36 @@ Page({
     raw_data: null,
     condition: null,
     pub_time: null,
-    aqi: null
+    aqi: null,
+    mode: 'local'
   },
   onLoad () {
-    let raw_data = app.globalData.localAir,
+    const mode = app.globalData.mode
+
+    if (mode === 'other') {
+      var raw_data = app.globalData.otherAir,
+        aqi = raw_data.air_now_city.aqi,
+        condition = utils.judgeColor(aqi),
+        color = utils.colorCode(condition),
+        city = app.globalData.city,
+        district = '',
+        pub_time = raw_data.air_now_city.pub_time.slice(-6)
+    } else {
+      var raw_data = app.globalData.localAir,
         aqi = raw_data.air_now_city.aqi,
         condition = utils.judgeColor(aqi),
         color = utils.colorCode(condition),
         city = app.globalData.city,
         district = app.globalData.district,
         pub_time = raw_data.air_now_city.pub_time.slice(-6)
-    
-    console.log(raw_data)
+    }
     
     this.setData({
       raw_data,
       condition,
       pub_time,
-      aqi
+      aqi,
+      mode
     })
 
     wx.setNavigationBarTitle({

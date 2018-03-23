@@ -1,5 +1,8 @@
 // pages/search/search.js
 const app = getApp()
+const url = 'https://free-api.heweather.com/s6/air'
+const key = 'c1a2bfdfd7b24fedb0471abae87e46f7'
+const cities = require('../../utils/cities.js')
 
 Page({
   data: {
@@ -13,14 +16,14 @@ Page({
     var historyCities = wx.getStorageSync('historyCities') || []
 
     this.setData({
-      presentCity: app.globalData.city || app.globalData.localAir.basic.location,
+      presentCity: app.globalData.localCity,
       historyCities
     })
   },
 
   searchCity(e) {
     const cityName = e.detail.value
-    console.log(cityName)
+
   },
 
   selectCity(e) {
@@ -29,9 +32,35 @@ Page({
     //若现历史中无此城市，则加入历史
     !historyCities.includes(selectedCity) && historyCities.unshift(selectedCity)
     wx.setStorageSync('historyCities', historyCities)
-    //更新全局数据
-    console.log('历史记录' + historyCities )
 
+    //更新全局数据
+    app.globalData.city = selectedCity
+    app.globalData.mode = 'other'
+
+    wx.showLoading({
+      title: '切换中',
+    })
+
+    wx.request({
+      url: url,
+      data: {
+        location: selectedCity,
+        key
+      },
+      success: res => {
+        app.globalData.otherAir = res.data.HeWeather6[0]
+        wx.reLaunch({
+          url: '../index/index?mode=other',
+        })
+      }
+    })
+  },
+  selectLocalCity() {
+    app.globalData.city = app.globalData.localCity
+    app.globalData.mode = 'local'
+    wx.reLaunch({
+      url: '../index/index?mode=local',
+    })
   },
   cancel () {
     wx.navigateBack()

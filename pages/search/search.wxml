@@ -12,7 +12,7 @@
       当前位置
     </view>
     <view class='city-wrapper'>
-      <view class='city-block' data-name='当前城市' bindtap='selectCity'>
+      <view class='city-block' data-name='当前城市' bindtap='selectLocalCity'>
         {{presentCity}}
       </view>
     </view>
