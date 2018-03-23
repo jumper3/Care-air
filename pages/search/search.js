@@ -6,6 +6,8 @@ const cities = require('../../utils/cities.js')
 
 Page({
   data: {
+    result: null,
+    cityList: null,
     selectedCity: null,
     presentCity: null,
     historyCities: [],
@@ -17,17 +19,31 @@ Page({
 
     this.setData({
       presentCity: app.globalData.localCity,
-      historyCities
+      historyCities,
+      cityList: cities.cityList
     })
   },
 
   searchCity(e) {
-    const cityName = e.detail.value
+    const cityName = e.detail.value,
+      cityList = this.data.cityList
+    var result = []
 
+    if (cityName) {
+      for (let i of cityList) {
+        if (i.chn.includes(cityName)) {
+          result.push(i)
+        }
+      }
+      this.setData({
+        result
+      })
+    }
   },
 
   selectCity(e) {
     const selectedCity = e.target.dataset.name
+    
     var historyCities = wx.getStorageSync('historyCities') || []
     //若现历史中无此城市，则加入历史
     !historyCities.includes(selectedCity) && historyCities.unshift(selectedCity)

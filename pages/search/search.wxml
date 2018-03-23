@@ -1,11 +1,17 @@
 <!--pages/search/search.wxml-->
 <view class="container">
   <view class='search'>
-     <input type="search" confirm-type='search' placeholder="请输入城市名" bindconfirm='searchCity'/>
+     <input type="search" confirm-type='search' placeholder="请输入城市名" bindinput='searchCity'/>
      <view class='cancel' bindtap="cancel">取消</view>
   </view>
 
-  <view class='list'></view>
+  <view class='list' wx:if='{{result}}'>
+    <view wx:for-items='{{result}}' wx:for-item='city' wx:key='city' 
+      data-name='{{city.chn}}' bindtap='selectCity' class='list-city'>
+      <text class='province' data-name='{{city.chn}}'>{{city.province_chn}}</text>
+       {{city.chn}}
+    </view>
+  </view>
 
   <view class='cities'>
     <view class='title'>

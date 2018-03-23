@@ -60,13 +60,14 @@ Page({
   },
   toReward() {
     wx.previewImage({
-      urls: ['https://wx2.sinaimg.cn/mw690/cc77ade0gy1fpeqb38dk3j20f00k840a.jpg'],
+      urls: ['http://ww4.sinaimg.cn/large/0060lm7Tly1fpn619qmn7j30fr0m20xd.jpg'],
     })
   },
   onShareAppMessage(res) {
+    const title = `${app.globalData.city}，${this.data.raw_data.air_now_city.qlty}，AQI:${this.data.raw_data.air_now_city.aqi}`
     return {
-      title: '我所在的城市，空气质量是……',
-      path: '../index/index'
+      title,
+      path: '/pages/index/index'
     }
   }
 })

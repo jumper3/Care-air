@@ -37,6 +37,27 @@ page {
   justify-content: center;
 }
 
+.list {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx rgba(150,150,150,0.3);
+  padding: 1rem 0;
+  max-height: 20rem;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.list-city {
+  color: #09bb07;
+  font-size: 28rpx;
+  line-height: 2.5rem;
+  text-indent: 2rem;
+}
+
+.province {
+  color: #888;
+}
+
 .cities {
   margin: 1rem auto;
   width: 85%;

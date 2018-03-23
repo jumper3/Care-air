@@ -81,9 +81,10 @@ Page({
     }
   },
   onShareAppMessage (res) {
+    const title = `${app.globalData.city}，${this.data.raw_data.air_now_city.qlty}，AQI:${this.data.raw_data.air_now_city.aqi}`
     return {
-      title: '我所在的城市，空气质量是……',
-      path: '../index/index'
+      title,
+      path: '/pages/index/index'
     }
   }
 })
