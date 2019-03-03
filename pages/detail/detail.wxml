@@ -55,6 +55,14 @@
       <view class='sta-qlty'>{{data.qlty}}</view>
     </view>
   </view>
+  <view class='notify-card'>
+    <view class='notify-head'>雾霾提醒 ⏰ <switch bindchange="toggleNotify"/></view>
+    <view class='notify-body' wx:if='{{!isNotify}}'>开启提醒后，每当您所在的地区空气质量超过限定范围时，小程序会在微信消息中自动提醒您</view>
+    <view class='controler-wrapper' wx:else>
+    <view class='slider-title'>设定提醒阈值</view>
+    <slider bindchange="slider2change" min="100" max="300" value="200" show-value step="50"/>
+    </view>
+  </view>
   <view class='link-area'>
     <view class='link' data-label='about' bindtap='toAbout'>关于</view>
     <view class='link'bindtap='toReward'>赞赏</view>
