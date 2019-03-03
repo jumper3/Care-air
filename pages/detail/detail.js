@@ -8,7 +8,8 @@ Page({
     condition: null,
     pub_time: null,
     aqi: null,
-    mode: 'local'
+    mode: 'local',
+    isNotify: false
   },
   onLoad () {
     const mode = app.globalData.mode
@@ -61,6 +62,11 @@ Page({
   toReward() {
     wx.previewImage({
       urls: ['http://ww4.sinaimg.cn/large/0060lm7Tly1fpn619qmn7j30fr0m20xd.jpg'],
+    })
+  },
+  toggleNotify(){
+    this.setData({
+      isNotify: !this.data.isNotify
     })
   },
   onShareAppMessage(res) {
