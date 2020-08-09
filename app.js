@@ -4,21 +4,23 @@ App({
 
     wx.getLocation({
       success: res => {
-        this.globalData.latitude = res.latitude
-        this.globalData.longitude = res.longitude
+        const { latitude, longitude } = res
+        this.globalData.latitude = latitude
+        this.globalData.longitude = longitude
         //获取详细位置
         const lbsKey = 'NTXBZ-OFCAD-PIB4V-HMKNN-LTENJ-B5BXP'
         wx.request({
           url: 'https://apis.map.qq.com/ws/geocoder/v1/',
           data: {
-            location: `${res.latitude},${res.longitude}`,
+            location: `${latitude},${longitude}`,
             key: lbsKey
           },
           success: res => {
             if (res.data.status === 0) {
-              this.globalData.city = res.data.result.address_component.city,
-              this.globalData.district = res.data.result.address_component.district,
-              this.globalData.localCity = res.data.result.address_component.city
+              const { city, district } = res.data.result.address_component
+              this.globalData.city = city,
+              this.globalData.district = district,
+              this.globalData.localCity = city
             } else {
               alert ("定位失败")
             }
